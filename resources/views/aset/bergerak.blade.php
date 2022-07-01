@@ -32,7 +32,7 @@
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
-                  <tr>
+                  {{-- <tr>
                     <th scope="col">No</th>
                     <th scope="col">Kode</th>
                     <th scope="col">Nama
@@ -41,6 +41,18 @@
                     <th scope="col">Jumlah Satuan</th>
                     <th scope="col">Kondisi</th>
                     <th scope="col">Aksi</th>
+                  </tr> --}}
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col"> 
+                   Nama barang
+                   </th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Jumlah Satuan</th>
+                    {{-- <th scope="col">Kondisi</th> --}}
+                    <th scope="col">Detail</th>
+                    <th scope="col">Pinjam</th>
+                    <th scope="col">status</th>
                   </tr>
                 </thead>
 
@@ -52,13 +64,13 @@
                   @if($data->jenis_asets_id == 1)
                   <tr>
                     <th>  {{ $nomor++ }}</th>
-                    <td> {{ $data->kode}}</td>
-                    <td> {{ $data->jenis_barangs->jenis_barang}} {{ $data->spesifikasi}}</td>
+                    <td> {{ $data->kode}}  {{ $data->jenis_barangs->jenis_barang}} {{ $data->spesifikasi}} </td>
+                    {{-- <td> {{ $data->jenis_barangs->jenis_barang}} {{ $data->spesifikasi}}</td> --}}
                     <td> 
                       <img src="{{ asset('fotobarang/'.$data->foto) }}" style= "width: 100px;" alt="...">
                     </td>
                     <td> {{ $data->jumlah}} {{ $data->satuans->nama_satuan}}</td>
-                    <td> {{ $data->kondisi}}</td>
+                    {{-- <td> {{ $data->kondisi}}</td> --}}
                     <td> 
 
                        <!-- Large Modal -->
@@ -200,7 +212,12 @@
                   </div>
                 </div>
               </div><!-- End Large Modal-->
-              
+              <td>
+                <a href=" " type="button" class="btn btn" style="background-color: #FFA500; color:#FFFFFF"> pinjam</a>
+                </td>
+                      <td>
+                      <a href=" " type="button" class="btn btn-danger"> penuh</a>
+                      </td>
               {{-- <a href="/data-asetbergerak/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
                         <a href="/data-asetbergerak/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a> --}}
                     </td>

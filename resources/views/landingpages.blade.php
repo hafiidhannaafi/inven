@@ -53,9 +53,10 @@
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
           <li><a class="nav-link scrollto" href="#features">Fasilitas & Tata Cara Pinjam</a></li>
-          <li class="dropdown"><a href="#"><span>Cek Status</span> <i class="bi bi-chevron-down"></i></a>
+
+          {{-- <li class="dropdown"><a href="#"><span>Cek Status</span> <i class="bi bi-chevron-down"></i></a> --}}
             <ul>
-              <li><a href="{{ url('/cekstatus/keperluanprojek') }}">Keperluan projek</a></li>
+              {{-- <li><a href="{{ url('/cekstatus/keperluanprojek') }}">Keperluan projek</a></li> --}}
               {{-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Keperluan projek</a></li>
@@ -65,11 +66,12 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li> --}}
-              <li><a href="{{ url('/cekstatus/peminjamanpribadi') }}">Peminjaman Pribadi</a></li>
+              {{-- <li><a href="{{ url('/cekstatus/peminjamanpribadi') }}">Peminjaman Pribadi</a></li> --}}
               {{-- <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li> --}}
             </ul>
           </li>
+          
           {{-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> --}}
           {{-- <li><a class="nav-link scrollto" href="{{ url('/cekstatus') }}">Cek Status</a></li> --}}
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>

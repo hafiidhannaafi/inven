@@ -458,22 +458,24 @@
           </li> --}}
 
           <li>
-            <a class="active" href="/aset/bergerak">
+            <a  href="/aset/bergerak">
               <i class="bi bi-circle"></i><span>Data Aset Bergerak</span>
             </a>
           </li>
+{{-- 
           <li>
-            <a class="active" href="/aset/tidakbergerak">
+            <a  href="/aset/tidakbergerak">
               <i class="bi bi-circle"></i><span>Data Aset Tidak Bergerak</span>
             </a>
-          </li>
+          </li> --}}
+
           <li>
-            <a class="active" href="/aset/peralatan">
+            <a  href="/aset/peralatan">
               <i class="bi bi-circle"></i><span>Data Peralatan</span>
             </a>
           </li>
           <li>
-            <a class="active" href="/aset/perlengkapan">
+            <a  href="/aset/perlengkapan">
               <i class="bi bi-circle"></i><span>Data Perlengkapan</span>
             </a>
           </li>
