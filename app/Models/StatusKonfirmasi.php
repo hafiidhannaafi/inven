@@ -13,7 +13,7 @@ class StatusKonfirmasi extends Model
         'status_konfirmasi'
     ];
 
-    public function peminjamans() //relasi tabel employee ke jenis posisi
+    public function peminjamans() 
     {
 
         return $this->hasMany(Peminjaman::class);

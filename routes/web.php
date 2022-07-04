@@ -258,7 +258,8 @@ Route::get('/barang-keluar/edit/{id}', 'App\Http\Controllers\BarangKeluarControl
 Route::post('/barang-keluar/update/{id}', 'App\Http\Controllers\BarangKeluarController@updatebarangkeluar')->name('updatebarangkeluar');
 Route::get('/barang-keluar/hapus/{id}', 'App\Http\Controllers\BarangKeluarController@hapusbarangkeluar')->name('hapusbarangkeluar');
 Route::get('/barang-keluar/status_keluar/{id}', 'App\Http\Controllers\BarangKeluarController@stok_keluar');
-
+Route::get('laporan/barangkeluar', [BarangKeluarController::class, 'laporanbarangkeluar']);
+Route::post('laporan/barangkeluar', 'App\Http\Controllers\BarangKeluarController@sortir')->name('barangkeluar');
 
 //PEMINJAMAN//
 Route::POST('inputpeminjaman', 'App\Http\Controllers\PeminjamanController@create')->name('inputpeminjaman');
@@ -272,6 +273,8 @@ Route::get('/status_ditolak/{id}', 'App\Http\Controllers\PeminjamanController@st
  
 //RIWAYAT PEMINJAM staff
 Route::get('/peminjaman/pengajuan', [PeminjamanController::class, 'pengajuan']); 
+Route::get('/detailbarang/{id}', [PeminjamanController::class, 'detail_barang']); 
+
 
 //RIWAYAT PEMINJAM admin
 Route::get('/peminjaman/peminjaman', [PeminjamanController::class, 'riwayat']); 
@@ -287,6 +290,12 @@ Route::get('/aset/bergerak', [BarangController::class, 'asetbergerak']);
 Route::get('/aset/tidakbergerak', [BarangController::class, 'asettidakbergerak']); 
 Route::get('/aset/peralatan', [BarangController::class, 'asetperalatan']); 
 Route::get('/aset/perlengkapan', [BarangController::class, 'asetperlengkapan']); 
+
+
+Route::get('/laporan/asetbergerak', [BarangController::class, 'laporanasetbergerak']);
+Route::get('/laporan/asetbergerak', function () {
+    return view('laporan.asetbergerak');
+});
 
 
 

@@ -58,7 +58,7 @@
                     {{-- <td> {{ $data->users->name}}</td> --}}
                     <td> {{ $data->nama_peminjam}}</td>
                     <td> {{ $data->jenis_peminjaman}}</td>
-                    <td> {{ $data->barangs->kode}} - {{ $data->barangs->jenis_barangs->jenis_barang}}  {{ $data->barangs->spesifikasi}} </td>
+                    {{-- <td> {{ $data->barangs->kode}} - {{ $data->barangs->jenis_barangs->jenis_barang}}  {{ $data->barangs->spesifikasi}} </td> --}}
                     <td>{{ $data->tujuan}}</td>
                     <td>{{ $data->jumlah_pinjam}}</td>
                     <td>{{ $data->tgl_pengajuan}}</td>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use App\Models\Barang;
 use App\Models\DataJenisAset;
@@ -51,6 +52,43 @@ class BarangKeluarController extends Controller
 
         ]);
        
+    }
+
+    public function laporanbarangkeluar()
+    {   
+        return view('laporan.barangkeluar');
+        // $dataasalperolehan = DataAsalPerolehan::all();
+        // $datajenisaset = DataJenisAset::all();
+        // $jenisbarang = JenisBarang::all();
+        // $datasatuan = Satuan::all();
+        // $inputbarang = Barang::all();
+        // $barangkeluar = barangkeluar::all();
+        // return view('laporan.barangkeluar',[
+        //     // "title" => "barangkeluar",
+        //     "jenisbarang" => $jenisbarang,
+        //     "jenisaset" => $datajenisaset,
+        //     "dataasalperolehan" => $dataasalperolehan,
+        //     "datasatuan" =>$datasatuan,
+        //     "inputbarang"=> $inputbarang,
+        //     "barangkeluar"=> $barangkeluar
+
+        // ]);
+       
+    }
+
+     public function sortir(Request $request){
+    
+        $startDate = Str::before($request->tglawal, ' -');
+        $endDate = Str::after($request->tglakhir, '- ');
+        switch ($request->submit) {
+            case 'table':
+
+                $barangkeluar = Barangkeluar::all()
+                    ->whereBetween('tanggal_keluar', [$startDate, $endDate]);
+             
+                return view('laporan.barangkeluar', compact( 'barangkeluar', 'startDate', 'endDate'));
+                break;
+        }
     }
 
     public function databarangkeluar()

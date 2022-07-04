@@ -179,6 +179,24 @@ class BarangController extends Controller
         
      }
 
+     public function laporanasetbergerak()
+     {
+         $dataasalperolehan = DataAsalPerolehan::all();
+         $datajenisaset = DataJenisAset::all();
+         $jenisbarang = JenisBarang::all();
+         $datasatuan = Satuan::all();
+         $inputbarang = Barang::all();
+         return view('laporan.asetbergerak',[
+             "title" => "peralatan",
+             "jenisbarang" => $jenisbarang,
+             "jenisaset" => $datajenisaset,
+             "dataasalperolehan" => $dataasalperolehan,
+             "datasatuan" =>$datasatuan,
+             "inputbarang"=> $inputbarang
+         ]);
+        
+     }
+
      public function asettidakbergerak()
      {
          $dataasalperolehan = DataAsalPerolehan::all();
@@ -401,3 +419,10 @@ class BarangController extends Controller
         return redirect('/data-perlengkapan')->with('success', 'Data Berhasil Dihapus!');
     }
 }
+
+//KODE
+    $data = Barang::max('kode');
+            $huruf = "LPTP";
+            $urutan = (int)substr($data, 3, 3);
+            $urutan++;
+            $barang_id = $huruf . sprintf("%04s", $urutan);

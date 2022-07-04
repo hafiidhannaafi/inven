@@ -38,6 +38,7 @@
                     <th scope="col">Posisi/Jabatan</th>
                     <th scope="col">Telp</th>
                     <th scope="col">Roles</th>
+                     <th scope="col">Status</th>
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -56,6 +57,10 @@
                     <td>{{ $data->posisi }}</td>
                     <td>{{ $data->telephone}}</td>
                     <td>{{ $data->roles->roles }}</td>
+                     {{-- @if($data->status_roles_id== 1) --}}
+                    <br><td>   <button type="button" class="btn btn-primary btn-sm">aktif</button><br>
+                    {{-- @elseif($data->status_roles_id== 2) --}}
+                 <button type="button" class="btn btn-danger btn-sm">non aktif</button></td>
                     <td> 
                       <a href="/data-admin/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
                         <a href="/data-admin/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a>

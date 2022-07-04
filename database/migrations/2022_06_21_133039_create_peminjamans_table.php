@@ -15,14 +15,16 @@ class CreatePeminjamansTable extends Migration
     {
         Schema::create('peminjamans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('barangs_id')->onUpdate('cascade')->onDelete('cascade');
+                        $table->string('kode_peminjaman');
+
+            // $table->foreignId('barangs_id')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('status_konfirmasis_id')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('status_peminjamans_id')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('users_id')->onUpdate('cascade')->onDelete('cascade');
             $table->string('nama_peminjam');
             $table->string('jenis_peminjaman');
             $table->string('tujuan');
-            $table->string('jumlah_pinjam');
+            // $table->string('jumlah_pinjam');
             $table->date('tgl_pengajuan');
             $table->date('tgl_pinjam');
             $table->date('tgl_kembali');
