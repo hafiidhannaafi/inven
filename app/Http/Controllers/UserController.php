@@ -228,5 +228,30 @@ class UserController extends Controller
                 return redirect('/data-kepala')->with('success', 'Data Berhasil Dihapus!');
             }
 
+        public function ubahstatus($id)
+        {
+            $akun = User::find($id);
+            $status_sekarang =$akun->status;
+            if($status_sekarang == 1){
+                $akun->where('id',$id)->update([
+                'status'=>0
+                ]);
+            }else
+            {
+                $akun->where('id',$id)->update([
+                'status'=>1
+                ]);
+            }
+
+                if ($akun->roles_id == 1){
+                return redirect()->route('data-admin')->with('success', 'Status Pengguna Berhasil diganti!');
+                }elseif ($akun->roles_id == 2){
+                    return redirect()->route('data-kepala')->with('success', 'Status Pengguna Berhasil diganti!');
+                }elseif ($akun->roles_id == 3){
+                    return redirect()->route('datauser')->with('success', 'Status Pengguna Berhasil diganti!');
+                }
+
+            }
+
     }
 

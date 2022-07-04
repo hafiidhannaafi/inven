@@ -291,11 +291,19 @@ Route::get('/aset/tidakbergerak', [BarangController::class, 'asettidakbergerak']
 Route::get('/aset/peralatan', [BarangController::class, 'asetperalatan']); 
 Route::get('/aset/perlengkapan', [BarangController::class, 'asetperlengkapan']); 
 
-
+//LAPORAN
 Route::get('/laporan/asetbergerak', [BarangController::class, 'laporanasetbergerak']);
 Route::get('/laporan/asetbergerak', function () {
     return view('laporan.asetbergerak');
 });
+
+// Route::get('/laporan/asetbergerak', [BarangController::class, 'laporanasetbergerak']);
+Route::get('/laporan/barangmasuk', function () {
+    return view('laporan.barangmasuk');
+});
+//STATUS USER
+Route::get('/ubah/status/{id}', 'App\Http\Controllers\UserController@ubahstatus');
+
 
 
 

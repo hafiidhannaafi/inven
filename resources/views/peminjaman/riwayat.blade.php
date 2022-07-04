@@ -76,9 +76,9 @@
                     @endif
                     <td> 
 
-                        <!--DETAIL DATA -->
+                        <!--STATUS DI SETUJUI -->
                         <a href="/status_setuju/{{ $data->id }}" type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></a></br>
-                        <!--EDIT DATA -->
+                        <!--STATUS DI TOLAK-->
                         <a href="/status_ditolak/{{ $data->id }}" type="button" class="btn btn-danger"><i class="bi bi-x"></i></a>
                       
                          

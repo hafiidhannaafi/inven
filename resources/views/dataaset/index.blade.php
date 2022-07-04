@@ -27,7 +27,7 @@
             <div class="card-body">
               <h5 class="card-title">Data Aset Tidak Bergerak</h5>
 
-              <a href="/data-aset/form" type="button"  class="btn btn" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
+              <a href="/data-aset/form" type="button"  class="btn btn-sm" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
            
               <!-- Table with stripped rows -->
               <table class="table datatable">

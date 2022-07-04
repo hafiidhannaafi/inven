@@ -26,7 +26,7 @@
             <div class="card-body">
               <h5 class="card-title">Data Admin</h5>
               {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
-              <a href="/data-admin/form" type="button"  class="btn btn" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
+              <a href="/data-admin/form" type="button"  class="btn btn-sm" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
               <!-- Table with stripped rows -->
               <table class="table datatable">
                 <thead>
@@ -57,13 +57,16 @@
                     <td>{{ $data->posisi }}</td>
                     <td>{{ $data->telephone}}</td>
                     <td>{{ $data->roles->roles }}</td>
-                     {{-- @if($data->status_roles_id== 1) --}}
-                    <br><td>   <button type="button" class="btn btn-primary btn-sm">aktif</button><br>
-                    {{-- @elseif($data->status_roles_id== 2) --}}
-                 <button type="button" class="btn btn-danger btn-sm">non aktif</button></td>
+                    <td>
+                     @if($data->status == 1)
+                    <a href="{{ url('ubah/status/'.$data->id) }}" type="button" class="btn btn-outline-primary btn-sm" >Aktif</a>
+                    @else
+                    <a href="{{ url('ubah/status/'.$data->id) }}" type="button" class="btn btn-outline-danger btn-sm">Non-Aktif</a>
+                     @endif
+                    </td>
                     <td> 
-                      <a href="/data-admin/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
-                        <a href="/data-admin/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a>
+                      <a href="/data-admin/edit/{{$data->id}}" type="button" class="btn btn-outline-info btn-sm" ><i class="bi bi-pencil"></i></a>
+                        <a href="/data-admin/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-outline-danger btn-sm" ><i class="bi bi-trash delete"></i></a>
                     </td>
                     </td>
                   </tr>

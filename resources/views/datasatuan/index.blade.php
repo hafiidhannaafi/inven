@@ -26,7 +26,7 @@
               {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
            
               <!-- Basic Modal -->
-            <button type="button" class="btn btn" style="background-color:  #012970; color:#FFFFFF"  data-bs-toggle="modal" data-bs-target="#basicModal" data-whatever="@mdo" href="/datajenisaset/tambah">
+            <button type="button" class="btn btn-sm" style="background-color:  #012970; color:#FFFFFF"  data-bs-toggle="modal" data-bs-target="#basicModal" data-whatever="@mdo" href="/datajenisaset/tambah">
                 Tambah 
               </button>
               <div class="modal fade" id="basicModal" tabindex="-1">

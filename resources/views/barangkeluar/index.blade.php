@@ -27,7 +27,7 @@
             <div class="card-body">
               <h5 class="card-title">Data Barang Keluar</h5>
 
-              <a href="/barang-keluar/form" type="button"  class="btn btn" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
+              <a href="/barang-keluar/form" type="button"  class="btn btn-sm" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
            
               <!-- Table with stripped rows -->
               <table class="table datatable">
@@ -60,11 +60,11 @@
                     <td> 
 
               @if($data->status == 0)
-              <a href="/barang-keluar/status_keluar/{{$data->id}}" type="button" class="btn btn-success"><i class="bi bi-check-lg"></i></a>
+              <a href="/barang-keluar/status_keluar/{{$data->id}}" type="button" class="btn btn-success btn-sm"><i class="bi bi-check-lg"></i></a>
               @else
               @endif
-              <a href="/barang-keluar/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil delete"></i></a>
-              <a href="/barang-keluar/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a>
+              <a href="/barang-keluar/edit/{{$data->id}}" type="button" class="btn btn-sm" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil delete"></i></a>
+              <a href="/barang-keluar/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger btn-sm"><i class="bi bi-trash delete"></i></a>
                     </td>
                  
                   </tr>

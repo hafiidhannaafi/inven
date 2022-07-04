@@ -26,6 +26,7 @@ class User extends Authenticatable
         'telephone',
         'posisi',
         'password',
+        'status',
     ];
 
     public function roles() // relasi tabel posisi ke kryawan
@@ -37,6 +38,11 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Peminjaman::class,'peminjamans_id'); //1 karyawan mempunyai 1 posisi
     }
+
+    // public function users() // relasi tabel posisi ke kryawan
+    // {
+    //     return $this->belongsTo(StatusUser::class,'status_users_id'); //1 karyawan mempunyai 1 posisi
+    // }
 
     
 

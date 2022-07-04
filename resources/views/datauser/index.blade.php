@@ -38,6 +38,7 @@
                     <th scope="col">Posisi/Jabatan</th>
                     <th scope="col">Telp</th>
                     <th scope="col">Role</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -56,9 +57,16 @@
                     <td>{{ $data->posisi }}</td>
                     <td>{{ $data->telephone}}</td>
                     <td>{{ $data->roles->roles }}</td>
+                     <td>
+                     @if($data->status == 1)
+                    <a href="{{ url('ubah/status/'.$data->id) }}" type="button" class="btn btn-outline-primary btn-sm" >Aktif</a>
+                    @else
+                    <a href="{{ url('ubah/status/'.$data->id) }}" type="button" class="btn btn-outline-danger btn-sm">Non-Aktif</a>
+                     @endif
+                    </td>
                     <td> 
-                      <a href="/data-user/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
-                        <a href="/data-user/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a>
+                      <a href="/data-user/edit/{{$data->id}}" type="button" class="btn btn-sm" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
+                        <a href="/data-user/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger btn-sm"><i class="bi bi-trash delete"></i></a>
                     </td>
                     </td>
                   </tr>

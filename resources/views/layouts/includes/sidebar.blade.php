@@ -207,7 +207,7 @@
           <i class="bi bi-layout-text-window-reverse"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
+          {{-- <li>
             <a href="tables-general.html">
               <i class="bi bi-circle"></i><span> Data peminjam</span>
             </a>
@@ -217,7 +217,7 @@
             <a href="tables-general.html">
               <i class="bi bi-circle"></i><span> Data kepala unit</span>
             </a>
-          </li>
+          </li> --}}
 
           <li>
             <a href="{{ url('/laporan/barangkeluar') }}">
@@ -226,6 +226,12 @@
           </li>
 
           <li>
+            <a href="{{ url('/laporan/barangmasuk') }}">
+              <i class="bi bi-circle"></i><span> Barang Masuk</span>
+            </a>
+          </li>
+
+          {{-- <li>
             <a href="{{ url('/laporan/asetbergerak') }}">
               <i class="bi bi-circle"></i><span> Data aset bergerak</span>
             </a>
@@ -247,7 +253,7 @@
             <a  href="tables-data.html">
               <i class="bi bi-circle"></i><span> Data aset perlengkapan</span>
             </a>
-          </li>
+          </li> --}}
 
         </ul>
       </li>
