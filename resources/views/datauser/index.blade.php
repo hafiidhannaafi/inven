@@ -33,6 +33,7 @@
                   <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
+                    {{-- <th scope="col">Foto</th> --}}
                     <th scope="col">Email</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">Posisi/Jabatan</th>
@@ -52,6 +53,9 @@
                   <tr>
                     <th> {{ $nomor++ }} </th>
                     <td>{{ $data->name }}</td>
+                    {{-- <td> 
+                      <img src="{{ asset('fotouser/'.$data->foto) }}" style= "width: 100px;" alt="...">
+                    </td> --}}
                     <td>{{ $data->email }}</td>
                     <td>{{ $data->alamat }}</td>
                     <td>{{ $data->posisi }}</td>

@@ -22,10 +22,7 @@
         <div class="row align-items-top">
             <div class="col-lg-14">
 
-             
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"> </h5>
+        
 
               <!-- Default Card -->
           <div class="card">

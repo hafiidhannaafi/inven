@@ -258,8 +258,7 @@ Route::get('/barang-keluar/edit/{id}', 'App\Http\Controllers\BarangKeluarControl
 Route::post('/barang-keluar/update/{id}', 'App\Http\Controllers\BarangKeluarController@updatebarangkeluar')->name('updatebarangkeluar');
 Route::get('/barang-keluar/hapus/{id}', 'App\Http\Controllers\BarangKeluarController@hapusbarangkeluar')->name('hapusbarangkeluar');
 Route::get('/barang-keluar/status_keluar/{id}', 'App\Http\Controllers\BarangKeluarController@stok_keluar');
-Route::get('laporan/barangkeluar', [BarangKeluarController::class, 'laporanbarangkeluar']);
-Route::post('laporan/barangkeluar', 'App\Http\Controllers\BarangKeluarController@sortir')->name('barangkeluar');
+
 
 //PEMINJAMAN//
 Route::POST('inputpeminjaman', 'App\Http\Controllers\PeminjamanController@create')->name('inputpeminjaman');
@@ -268,8 +267,8 @@ Route::get('/peminjaman/riwayat', [PeminjamanController::class, 'peminjaman']);
 Route::get('/peminjaman/edit/{id}', 'App\Http\Controllers\PeminjamanController@editpeminjaman')->name('editpeminjaman');
 Route::post('/peminjaman/update/{id}', 'App\Http\Controllers\PeminjamanController@updatepeminjaman')->name('updatepeminjaman');
 Route::get('/peminjaman/hapus/{id}', 'App\Http\Controllers\PeminjamanController@hapuspeminjaman')->name('hapuspeminjaman');
-Route::get('/status_setuju/{id}', 'App\Http\Controllers\PeminjamanController@status_setuju');
-Route::get('/status_ditolak/{id}', 'App\Http\Controllers\PeminjamanController@status_ditolak');
+Route::get('/status_setuju/{kode_peminjaman}', 'App\Http\Controllers\PeminjamanController@status_setuju');
+Route::get('/status_ditolak/{kode_peminjaman}', 'App\Http\Controllers\PeminjamanController@status_ditolak');
  
 //RIWAYAT PEMINJAM staff
 Route::get('/peminjaman/pengajuan', [PeminjamanController::class, 'pengajuan']); 
@@ -297,10 +296,17 @@ Route::get('/laporan/asetbergerak', function () {
     return view('laporan.asetbergerak');
 });
 
-// Route::get('/laporan/asetbergerak', [BarangController::class, 'laporanasetbergerak']);
-Route::get('/laporan/barangmasuk', function () {
-    return view('laporan.barangmasuk');
+Route::get('/laporan/barangmasuk', [BarangMasukController::class, 'laporanbarangmasuk']);
+Route::get('/laporan/barangkeluar', [BarangKeluarController::class, 'laporanbarangkeluar']);
+Route::get('/laporan/asetbergerak', [BarangController::class, 'laporanasetbergerak']);
+Route::get('/laporan/asettidakbergerak', [BarangController::class, 'laporanasettidakbergerak']);
+Route::get('/laporan/perlengkapan', [BarangController::class, 'laporanperlengkapan']);
+Route::get('/laporan/peralatan', [BarangController::class, 'laporanperalatan']);
+Route::post('laporan/barangkeluar', 'App\Http\Controllers\BarangKeluarController@sortir')->name('barangkeluar');
+Route::get('/laporan', function () {
+    return view('laporan.menu');
 });
+
 //STATUS USER
 Route::get('/ubah/status/{id}', 'App\Http\Controllers\UserController@ubahstatus');
 

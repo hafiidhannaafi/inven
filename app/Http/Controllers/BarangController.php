@@ -215,6 +215,24 @@ class BarangController extends Controller
         
      }
 
+      public function laporanasettidakbergerak()
+     {
+         $dataasalperolehan = DataAsalPerolehan::all();
+         $datajenisaset = DataJenisAset::all();
+         $jenisbarang = JenisBarang::all();
+         $datasatuan = Satuan::all();
+         $inputbarang = Barang::all();
+         return view('laporan.asettidakbergerak',[
+             "title" => "peralatan",
+             "jenisbarang" => $jenisbarang,
+             "jenisaset" => $datajenisaset,
+             "dataasalperolehan" => $dataasalperolehan,
+             "datasatuan" =>$datasatuan,
+             "inputbarang"=> $inputbarang
+         ]);
+        
+     }
+
      public function asetperalatan()
      {
          $dataasalperolehan = DataAsalPerolehan::all();

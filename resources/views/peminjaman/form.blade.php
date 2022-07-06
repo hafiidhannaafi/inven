@@ -104,7 +104,7 @@ $(function() {
               <div class="row mb-3">
                 <label for="validationCustom01" class="col-sm-2 col-form-label">Nama Peminjam</label>
                 <div class="col-sm-10">
-                  <input type="text" id="validationCustom01" name="nama_peminjam" class="form-control"  required placeholder=" nama peminjam">
+                  <input type="text" id="validationCustom01" name="nama_peminjam" value=" {{ auth()->user()->name}}" readonly class="form-control"  required placeholder=" nama peminjam">
                   <div class="invalid-feedback">
                     Harus di isi
                   </div>
@@ -228,7 +228,7 @@ $(function() {
 </div> --}}
 
 
-<div class="row mb-3">
+{{-- <div class="row mb-3">
   <label for="validationTooltip02" class="col-sm-2 col-form-label"> Jumlah Jenis Barang pinjam </label>
   <div class="col-sm-10">
     <input type="number" id="validationTooltip02" name="jml_barang"   class="form-control"  required placeholder=" ex. total jumlah jenis barang yang di pinjam">
@@ -236,7 +236,8 @@ $(function() {
       Harus di isi
     </div>
   </div>
-</div>
+</div> --}}
+
 <div class="row mb-3">
   <label for="validationTooltip02" class="col-sm-2 col-form-label"> Tujuan Pinjam </label>
   <div class="col-sm-10">
@@ -246,17 +247,18 @@ $(function() {
     </div>
   </div>
 </div>
-
+            
 
 <div class="row mb-3">
   <label for="validationTooltip05" class="col-sm-2 col-form-label">Tgl Pengajuan</label>
   <div class="col-sm-10">
-    <input type="date" id="validationTooltip05" name="tgl_pengajuan"  class="form-control"  required>
+    <input type="date" id="validationTooltip05" name="tgl_pengajuan" value="<?php echo date('Y-m-d') ?>"  readonly class="form-control"  required>
     <div class="invalid-feedback">
       Harus di isi
     </div>
   </div>
 </div>
+
 
 <div class="row mb-3">
   <label for="validationTooltip05" class="col-sm-2 col-form-label">Tgl Peminjaman</label>
@@ -277,11 +279,12 @@ $(function() {
     </div>
   </div>
 </div>
+</div>
 
 <div class="row mb-3">
   <label for="validationTooltip03" class="col-sm-2 col-form-label">Surat Peminjaman</label>
   <div class="col-sm-10">
-    <input type="text"  id="validationTooltip03" name="surat_pinjam"  class="form-control"required>
+    <input type="file"  id="validationTooltip03" name="surat_pinjam"  class="form-control"required>
     <div class="invalid-feedback">
       Harus di isi
     </div>

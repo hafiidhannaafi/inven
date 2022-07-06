@@ -14,8 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-             $table->id();
-            //  $table->foreignId('status_users_id')->onUpdate('cascade')->onDelete('cascade');
+            $table->id();
             $table->foreignId('roles_id')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
             $table->string('email')->unique();
@@ -24,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('posisi');
             $table->string('telephone');
             $table->string('password');
-            $table->string('status');
+             $table->string('status');
             $table->rememberToken();
             $table->timestamps();
         });

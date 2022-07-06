@@ -1,10 +1,12 @@
 @extends('layouts.master')
 @section('content')
+{{-- 
+@section ('title', 'barangmasuk')
+@section ('barangmasuk', 'active')
+@section ('charts-nav', 'show') --}}
 
-<link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <link href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet" />
-
-
 
 <main id="main" class="main">
 
@@ -28,10 +30,10 @@
             <div class="card-body">
               <h5 class="card-title">Data Barang Masuk</h5>
 
-              <a href="/barang-masuk/form" type="button"  class="btn btn-sm" style="background-color:  #012970; color:#FFFFFF">Tambah</a>
+            
            
               <!-- Table with stripped rows -->
-              <table id="example" class="table datatable">
+              <table id="example" class="table-border display nowrap" style="width:100%">
                 <thead>
                   <tr>
                     <th scope="col">No</th>
@@ -43,7 +45,7 @@
                     <th scope="col">supplier</th>
                     <th scope="col">Kondisi</th>
                     <th scope="col">Ket</th>
-                    <th scope="col">Aksi</th>
+                    <th scope="col"> </th>
                   </tr>
                 </thead>
 
@@ -60,7 +62,17 @@
                     <td> {{ $data->supplier}}</td>
                     <td> {{ $data->kondisi}}</td>
                     <td> {{ $data->ket}}</td>
-                   
+                    <td> 
+
+                      {{-- @if($data->status == 0)
+                      <a href="/barang-masuk/status_masuk/{{$data->id}}" type="button" class="btn btn-success btn-sm"><i class="bi bi-check-lg"></i></a>
+                      @else
+                      @endif --}}
+
+              {{-- <a href="/barang-masuk/edit/{{$data->id}}" type="button" class="btn btn-sm" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil delete"></i></a>
+              <a href="/barang-masuk/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger  btn-sm"><i class="bi bi-trash delete"></i></a> --}}
+                    </td>
+                 
                   </tr>
                  @endforeach
                 </tbody>
@@ -72,6 +84,8 @@
 
         </div>
       </div>
+
+
       <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
@@ -91,32 +105,6 @@ $(document).ready(function() {
     } );
 } );
 </script> 
+
     </section>
-
-{{-- <table id="example" class="display nowrap" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011-04-25</td>
-                <td>$320,800</td>
-            </tr>
-        </tbody>
-    </table> --}}
-
-
-    @endsection
-
+@endsection

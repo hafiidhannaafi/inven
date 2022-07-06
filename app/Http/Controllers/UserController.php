@@ -91,7 +91,7 @@ class UserController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    public function create(Request $request)
+    protected function create(Request $request)
     {
         $this->validate($request, [
             'name' => ['required', 'string', 'max:255'],

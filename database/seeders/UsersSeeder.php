@@ -57,7 +57,7 @@ class UsersSeeder extends Seeder
                 'posisi'=>"admin",
                 'telephone'=>"0811121",
                 'password' => bcrypt('12345678'),
-                 'status'=>"1",
+                'status'=>"1",
                 'created_at' => new \DateTime,
                 'updated_at' => null,
             ],

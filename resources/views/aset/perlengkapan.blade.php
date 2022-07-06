@@ -206,7 +206,7 @@
                 <a href=" " type="button" class="btn btn" style="background-color: #FFA500; color:#FFFFFF"> pinjam</a>
                 </td>
                       <td>
-                      <a href=" " type="button" class="btn btn-danger"> penuh</a>
+                      <a href="/peminjaman/form" type="button" class="btn btn-danger"> penuh</a>
                       </td>
               
               {{-- <a href="/data-perlengkapan/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>

@@ -56,23 +56,23 @@ class BarangKeluarController extends Controller
 
     public function laporanbarangkeluar()
     {   
-        return view('laporan.barangkeluar');
-        // $dataasalperolehan = DataAsalPerolehan::all();
-        // $datajenisaset = DataJenisAset::all();
-        // $jenisbarang = JenisBarang::all();
-        // $datasatuan = Satuan::all();
-        // $inputbarang = Barang::all();
-        // $barangkeluar = barangkeluar::all();
-        // return view('laporan.barangkeluar',[
-        //     // "title" => "barangkeluar",
-        //     "jenisbarang" => $jenisbarang,
-        //     "jenisaset" => $datajenisaset,
-        //     "dataasalperolehan" => $dataasalperolehan,
-        //     "datasatuan" =>$datasatuan,
-        //     "inputbarang"=> $inputbarang,
-        //     "barangkeluar"=> $barangkeluar
+  
+        $dataasalperolehan = DataAsalPerolehan::all();
+        $datajenisaset = DataJenisAset::all();
+        $jenisbarang = JenisBarang::all();
+        $datasatuan = Satuan::all();
+        $inputbarang = Barang::all();
+        $barangkeluar = barangkeluar::all();
+        return view('laporan.barangkeluar',[
+            // "title" => "barangkeluar",
+            "jenisbarang" => $jenisbarang,
+            "jenisaset" => $datajenisaset,
+            "dataasalperolehan" => $dataasalperolehan,
+            "datasatuan" =>$datasatuan,
+            "inputbarang"=> $inputbarang,
+            "barangkeluar"=> $barangkeluar
 
-        // ]);
+        ]);
        
     }
 

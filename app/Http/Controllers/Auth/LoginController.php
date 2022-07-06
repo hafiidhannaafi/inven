@@ -57,22 +57,22 @@ class LoginController extends Controller
 
             if (auth()->user()->roles_id == 1 && auth()->user()->status == 1) 
              {
-                return redirect()->route('data-admin')->with('success', 'Status Pengguna Berhasil diganti!');
+                return redirect()->route('data-admin');
 
             } elseif (auth()->user()->roles_id == 1 && auth()->user()->status == 0) {
                 (auth()->logout());
             
             }  elseif (auth()->user()->roles_id == 2 && auth()->user()->status == 1) {
-                return redirect()->route('data-kepala')->with('success', 'Status Pengguna Berhasil diganti!');
+                return redirect()->route('data-kepala');
 
             } elseif (auth()->user()->roles_id == 2 && auth()->user()->status == 0) {
                 (auth()->logout());
 
-             }  elseif (auth()->user()->roles_id == 3 && auth()->user()->status == 1) {
-                return redirect()->route('datauser')->with('success', 'Status Pengguna Berhasil diganti!');
+            //  }  elseif (auth()->user()->roles_id == 3 && auth()->user()->status == 1) {
+            //     return redirect()->route('datauser');
 
-            } elseif (auth()->user()->roles_id == 3 && auth()->user()->status == 0) {
-                (auth()->logout());
+            // } elseif (auth()->user()->roles_id == 3 && auth()->user()->status == 0) {
+            //     (auth()->logout());
 
         } else 
         {

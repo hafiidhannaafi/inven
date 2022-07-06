@@ -25,7 +25,10 @@ class DetailPeminjaman extends Model
 
         return $this->belongsTo(Barang::class, 'barangs_id');
     }
-
+    public function status_konfirmasis() 
+    {
+        return $this->belongsTo(StatusKonfirmasi::class,'status_konfirmasis_id'); 
+    }
   
 
 }

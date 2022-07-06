@@ -203,7 +203,7 @@
                 </div>
               </div><!-- End Large Modal-->
               <td>
-              <a href=" " type="button" class="btn btn" style="background-color: #FFA500; color:#FFFFFF"> pinjam</a>
+              <a href="/peminjaman/form" type="button" class="btn btn" style="background-color: #FFA500; color:#FFFFFF"> pinjam</a>
               </td>
                     <td>
                     <a href=" " type="button" class="btn btn-danger"> penuh</a>

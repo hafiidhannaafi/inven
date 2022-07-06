@@ -25,7 +25,7 @@
              
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Riwayat Peminjaman {{ auth()->user()->name}}</h5>
+              <h5 class="card-title">Riwayat Peminjaman </h5>
               <!-- Default Card -->
           <div class="card">
             <div class="card-body">

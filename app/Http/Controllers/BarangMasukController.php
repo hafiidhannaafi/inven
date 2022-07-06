@@ -51,6 +51,26 @@ class BarangMasukController extends Controller
        
     }
 
+    public function laporanbarangmasuk()
+    {
+        $dataasalperolehan = DataAsalPerolehan::all();
+        $datajenisaset = DataJenisAset::all();
+        $jenisbarang = JenisBarang::all();
+        $datasatuan = Satuan::all();
+        $inputbarang = Barang::all();
+        $barangmasuk= BarangMasuk::all();
+        return view('laporan.barangmasuk',[
+            "title" => "laporan barangmasuk",
+            "jenisbarang" => $jenisbarang,
+            "jenisaset" => $datajenisaset,
+            "dataasalperolehan" => $dataasalperolehan,
+            "datasatuan" =>$datasatuan,
+            "inputbarang"=> $inputbarang,
+            "barangmasuk"=> $barangmasuk
+        ]);
+       
+    }
+
     public function databarangmasuk()
     {
         $dataasalperolehan = DataAsalPerolehan::all();
