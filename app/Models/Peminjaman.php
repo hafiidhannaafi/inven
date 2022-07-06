@@ -20,7 +20,7 @@ class Peminjaman extends Model
         'tgl_kembali',
         'surat_pinjam',
         // 'tgl_perpanjangan',
-        'status_konfirmasis_id',
+        // 'status_konfirmasis_id',
         'status_peminjamans_id',
 
     ];

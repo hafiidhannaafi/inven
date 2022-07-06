@@ -53,7 +53,7 @@
                   <tr>
                     <th>{{ $nomor++ }}</th>
                     <td> {{ $data->barangs->kode}} - {{ $data->barangs->jenis_barangs->jenis_barang}}  {{ $data->barangs->spesifikasi}} </td>
-                    <td> {{ $data->tanggal_keluar}}</td>
+                    <td>   <?php echo date('d F Y', strtotime ( $data->tanggal_keluar  ) ); ?></td>
                     <td> {{ $data->jumlah_keluar}}</td>
                     <td> {{ $data->kondisi}}</td>
                     <td> {{ $data->ket}}</td>

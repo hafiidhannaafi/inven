@@ -300,8 +300,8 @@ Route::get('/laporan/barangmasuk', [BarangMasukController::class, 'laporanbarang
 Route::get('/laporan/barangkeluar', [BarangKeluarController::class, 'laporanbarangkeluar']);
 Route::get('/laporan/asetbergerak', [BarangController::class, 'laporanasetbergerak']);
 Route::get('/laporan/asettidakbergerak', [BarangController::class, 'laporanasettidakbergerak']);
-Route::get('/laporan/perlengkapan', [BarangController::class, 'laporanperlengkapan']);
-Route::get('/laporan/peralatan', [BarangController::class, 'laporanperalatan']);
+Route::get('/laporan/perlengkapan', [BarangController::class, 'laporanasetperlengkapan']);
+Route::get('/laporan/peralatan', [BarangController::class, 'laporanasetperalatan']);
 Route::post('laporan/barangkeluar', 'App\Http\Controllers\BarangKeluarController@sortir')->name('barangkeluar');
 Route::get('/laporan', function () {
     return view('laporan.menu');

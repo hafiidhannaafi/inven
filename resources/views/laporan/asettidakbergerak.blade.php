@@ -27,7 +27,7 @@
 
              
           
-              <h5 class="card-title">Data Barang Keluar</h5>
+              <h5 class="card-title">Laporan Aset Tidak Bergerak</h5>
            
               <!-- Table with stripped rows -->
               <table id="example" class="table-border display nowrap" style="width:100%">

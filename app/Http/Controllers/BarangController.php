@@ -251,6 +251,24 @@ class BarangController extends Controller
         
      }
 
+     public function laporanasetperalatan()
+     {
+         $dataasalperolehan = DataAsalPerolehan::all();
+         $datajenisaset = DataJenisAset::all();
+         $jenisbarang = JenisBarang::all();
+         $datasatuan = Satuan::all();
+         $inputbarang = Barang::all();
+         return view('laporan.peralatan',[
+             "title" => "peralatan",
+             "jenisbarang" => $jenisbarang,
+             "jenisaset" => $datajenisaset,
+             "dataasalperolehan" => $dataasalperolehan,
+             "datasatuan" =>$datasatuan,
+             "inputbarang"=> $inputbarang
+         ]);
+        
+     }
+
      public function asetperlengkapan()
      {
          $dataasalperolehan = DataAsalPerolehan::all();
@@ -259,6 +277,24 @@ class BarangController extends Controller
          $datasatuan = Satuan::all();
          $inputbarang = Barang::all();
          return view('aset.perlengkapan',[
+             "title" => "perlengkapan",
+             "jenisbarang" => $jenisbarang,
+             "jenisaset" => $datajenisaset,
+             "dataasalperolehan" => $dataasalperolehan,
+             "datasatuan" =>$datasatuan,
+             "inputbarang"=> $inputbarang
+         ]);
+        
+     }
+
+      public function laporanasetperlengkapan()
+     {
+         $dataasalperolehan = DataAsalPerolehan::all();
+         $datajenisaset = DataJenisAset::all();
+         $jenisbarang = JenisBarang::all();
+         $datasatuan = Satuan::all();
+         $inputbarang = Barang::all();
+         return view('laporan.perlengkapan',[
              "title" => "perlengkapan",
              "jenisbarang" => $jenisbarang,
              "jenisaset" => $datajenisaset,

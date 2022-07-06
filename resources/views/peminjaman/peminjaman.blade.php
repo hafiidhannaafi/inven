@@ -61,8 +61,8 @@
                     {{-- <td> {{ $data->barangs->kode}} - {{ $data->barangs->jenis_barangs->jenis_barang}}  {{ $data->barangs->spesifikasi}} </td> --}}
                     <td>{{ $data->tujuan}}</td>
                     {{-- <td>{{ $data->jumlah_pinjam}}</td> --}}
-                    <td>{{ $data->tgl_pengajuan}}</td>
-                    <td>{{ $data->tgl_pinjam}}</td>
+                    <td> <?php echo date('d F Y', strtotime ( $data->tgl_pengajuan  ) ); ?> </td>
+                    <td> <?php echo date('d F Y', strtotime ( $data->tgl_pinjam  ) ); ?> </td>
                     <td>{{ $data->tgl_kembali}}</td>
                     <td>
                     {{-- <button style =" float :right; background-color:   #012970; color:#FFFFFF" type="submit" class="btn btn" >Submit</button> --}}

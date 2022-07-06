@@ -225,7 +225,7 @@ class PeminjamanController extends Controller
         // dd(count($jumlah_pinjam));exit;
             $peminjaman =new Peminjaman();
             $peminjaman->kode_peminjaman = $book_id;
-            $peminjaman->status_konfirmasis_id = $request->status_konfirmasis_id;
+            // $peminjaman->status_konfirmasis_id = $request->status_konfirmasis_id;
             $peminjaman->status_peminjamans_id = $request->status_peminjamans_id;
             $peminjaman ->users_id = $request->users_id;
             $peminjaman ->nama_peminjam = $request->nama_peminjam;
@@ -332,7 +332,7 @@ class PeminjamanController extends Controller
         foreach(Barang::where('id', $d->barangs_id)->get() as $b) //perulngan dimana id barang = barangs_id yg ada di detail peminjaman
         {
             $b->jumlah -= (int)$d->jumlah_pinjam;
-             $b->save();
+            $b->save();
 
         }
         }

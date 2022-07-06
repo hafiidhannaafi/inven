@@ -63,8 +63,8 @@
 
                        <!-- Large Modal -->
                        
-              <button type="button" class="btn btn" style="background-color:  #012970; color:#FFFFFF" data-bs-toggle="modal" data-bs-target="#modaldetail{{ $data->id}}" >
-                <i class="bi bi-info"></i>
+              <button type="button" class="btn btn-sm" style="background-color:  #012970; color:#FFFFFF" data-bs-toggle="modal" data-bs-target="#modaldetail{{ $data->id}}" >
+                <i class="bi bi-eye"></i>
               </button>
              
               <div class="modal fade"  id="modaldetail{{ $data->id}}"  tabindex="-1">
@@ -119,7 +119,7 @@
   
                     <div class="row">
                       <div class="col-lg-5 col-md-4 label">Tgl Perolehan</div>
-                      <div class="col-lg-7 col-md-8"> {{ $data->tanggal_perolehan}}</div>
+                      <div class="col-lg-7 col-md-8"> <?php echo date('d F Y', strtotime ( $data->tanggal_perolehan  ) ); ?></div>
                     </div>
   
                     <div class="row">
@@ -201,8 +201,8 @@
                 </div>
               </div><!-- End Large Modal-->
               
-              <a href="/data-peralatan/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
-                        <a href="/data-peralatan/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a>
+              <a href="/data-peralatan/edit/{{$data->id}}" type="button" class="btn btn-sm" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
+                        <a href="/data-peralatan/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger btn-sm"><i class="bi bi-trash delete"></i></a>
                     </td>
                     @endif
                     @endforeach

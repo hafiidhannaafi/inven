@@ -28,7 +28,7 @@
              
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Data Barang Masuk</h5>
+              <h5 class="card-title">Laporan Data Barang Masuk</h5>
 
             
            
